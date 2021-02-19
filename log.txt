@@ -1,0 +1,79 @@
+Publishing the Voyager assets, database, and config files
+Copied Directory [\vendor\tcg\voyager\publishable\database\seeds] To [\database\seeds]
+Publishing complete.
+Migrating the database tables into your application
+Migration table created successfully.
+Migrating: 2014_10_12_000000_create_users_table
+Migrated:  2014_10_12_000000_create_users_table (436.02ms)
+Migrating: 2014_10_12_100000_create_password_resets_table
+Migrated:  2014_10_12_100000_create_password_resets_table (289.02ms)
+Migrating: 2016_01_01_000000_add_voyager_user_fields
+Migrated:  2016_01_01_000000_add_voyager_user_fields (376.02ms)
+Migrating: 2016_01_01_000000_create_data_types_table
+Migrated:  2016_01_01_000000_create_data_types_table (1,479.08ms)
+Migrating: 2016_05_19_173453_create_menu_table
+Migrated:  2016_05_19_173453_create_menu_table (1,070.06ms)
+Migrating: 2016_10_21_190000_create_roles_table
+Migrated:  2016_10_21_190000_create_roles_table (460.03ms)
+Migrating: 2016_10_21_190000_create_settings_table
+Migrated:  2016_10_21_190000_create_settings_table (352.02ms)
+Migrating: 2016_11_30_135954_create_permission_table
+Migrated:  2016_11_30_135954_create_permission_table (360.02ms)
+Migrating: 2016_11_30_141208_create_permission_role_table
+Migrated:  2016_11_30_141208_create_permission_role_table (2,844.16ms)
+Migrating: 2016_12_26_201236_data_types__add__server_side
+Migrated:  2016_12_26_201236_data_types__add__server_side (785.04ms)
+Migrating: 2017_01_13_000000_add_route_to_menu_items_table
+Migrated:  2017_01_13_000000_add_route_to_menu_items_table (717.04ms)
+Migrating: 2017_01_14_005015_create_translations_table
+Migrated:  2017_01_14_005015_create_translations_table (857.05ms)
+Migrating: 2017_01_15_000000_make_table_name_nullable_in_permissions_table
+Migrated:  2017_01_15_000000_make_table_name_nullable_in_permissions_table (834.05ms)
+Migrating: 2017_03_06_000000_add_controller_to_data_types_table
+Migrated:  2017_03_06_000000_add_controller_to_data_types_table (733.04ms)
+Migrating: 2017_04_21_000000_add_order_to_data_rows_table
+Migrated:  2017_04_21_000000_add_order_to_data_rows_table (351.02ms)
+Migrating: 2017_07_05_210000_add_policyname_to_data_types_table
+Migrated:  2017_07_05_210000_add_policyname_to_data_types_table (260.02ms)
+Migrating: 2017_08_05_000000_add_group_to_settings_table
+Migrated:  2017_08_05_000000_add_group_to_settings_table (372.02ms)
+Migrating: 2017_11_26_013050_add_user_role_relationship
+Migrated:  2017_11_26_013050_add_user_role_relationship (1,860.11ms)
+Migrating: 2017_11_26_015000_create_user_roles_table
+Migrated:  2017_11_26_015000_create_user_roles_table (2,379.14ms)
+Migrating: 2018_03_11_000000_add_user_settings
+Migrated:  2018_03_11_000000_add_user_settings (250.01ms)
+Migrating: 2018_03_14_000000_add_details_to_data_types_table
+Migrated:  2018_03_14_000000_add_details_to_data_types_table (202.01ms)
+Migrating: 2018_03_16_000000_make_settings_value_nullable
+Migrated:  2018_03_16_000000_make_settings_value_nullable (543.03ms)
+Migrating: 2019_08_19_000000_create_failed_jobs_table
+Migrated:  2019_08_19_000000_create_failed_jobs_table (282.02ms)
+Attempting to set Voyager User model as parent to App\User
+Dumping the autoloaded files and reloading all new files
+Adding Voyager routes to routes/web.php
+Seeding data into the database
+Publishing dummy content
+Copied Directory [\vendor\tcg\voyager\publishable\database\dummy_seeds] To [\database\seeds]
+Copied Directory [\vendor\tcg\voyager\publishable\dummy_content] To [\storage\app\public]
+Copied File [\vendor\tcg\voyager\publishable\config\voyager_dummy.php] To [\config\voyager.php]
+Copied Directory [\vendor\tcg\voyager\publishable\database\migrations] To [\database\migrations]
+Publishing complete.
+Migrating dummy tables
+Migrating: 2016_01_01_000000_create_pages_table
+Migrated:  2016_01_01_000000_create_pages_table (309.02ms)
+Migrating: 2016_01_01_000000_create_posts_table
+Migrated:  2016_01_01_000000_create_posts_table (282.02ms)
+Migrating: 2016_02_15_204651_create_categories_table
+Migrated:  2016_02_15_204651_create_categories_table (1,087.06ms)
+Migrating: 2017_04_11_000000_alter_post_nullable_fields_table
+Migrated:  2017_04_11_000000_alter_post_nullable_fields_table (1,278.07ms)
+Seeding dummy data
+Setting up the hooks
+Copied File [\vendor\larapack\hooks\publishable\config\hooks.php] To [\config\hooks.php]
+Publishing complete.
+Hooks are now ready to use! Go ahead and try to "php artisan hook:install test-hook"
+Adding the storage symlink to your public folder
+The [D:\tcc-segunda_guerra_fria\tcc-segunda_guerra_fria\public\storage] link has been connected to [D:\tcc-segunda_guerra_fria\tcc-segunda_guerra_fria\storage\app/public].
+The links have been created.
+Successfully installed Voyager! Enjoy
