@@ -13,7 +13,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = \TCG\Voyager\Models\Post::all(); 
+        $posts = \TCG\Voyager\Models\Post::paginate(2); 
         //scopePublished
         $categories = \TCG\Voyager\Models\Category::all();
 
@@ -61,7 +61,6 @@ class PostController extends Controller
 
         return view('posts.category', ['category'=> $category]);
     }
-
 
 
 }

@@ -6,6 +6,9 @@ use  App\Http\Controllers\PostController;
 
 use  App\Http\Controllers\PagesController;
 
+use  App\Http\Controllers\HomeController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,8 +20,11 @@ use  App\Http\Controllers\PagesController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+/*Rotas dos Index*/
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/teste', function () {
+    return view('alternative');
 });
 
 /*Rotas dos Posts*/

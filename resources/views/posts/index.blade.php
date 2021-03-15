@@ -3,7 +3,8 @@
 @section('content')
 <div class="container" >
        <div class="row">
-                 @foreach ($posts as $post)
+               
+                @foreach ($posts as $post)
                         <article>
                                 <a class="row mb-3" href="{{route('posts.slug', $post->slug)}}" style="text-decoration: none; color: black;"  >
                                         <div class="col-sm-4" style="padding: unset">
@@ -19,6 +20,8 @@
                                 </a>
                         </article>
                 @endforeach     
+
+                {{ $posts->links() }}
 
                 @foreach ($categorias as $categoria)
                       
