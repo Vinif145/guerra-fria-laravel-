@@ -14,6 +14,13 @@
 </head>
 <body>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+			<header style="background: url('{{asset("img/A Segunda Guerra Fria.png")}}'); background-size: cover; background-position: center center; height: 100vh; width: 100vw;">
+				<div class="position-absolute top-50 start-50 translate-middle" style="background: #001928; width: inherit;">
+					<h1 style="text-align: center;text-transform: uppercase; display: block; color: white; position: relative;
+					font-family: 'Shippori Mincho', serif;">A Segunda Guerra Fria</h1>
+				</div>
+			</header>
+
 <header style="background: url('{{asset("img/A Segunda Guerra Fria.png")}}'); background-size: cover; background-position: center center; height: 100vh; width: 100vw;">
   <div class="position-absolute top-50 start-50 translate-middle" style="background: #001928; width: inherit;">
     <h1 style="text-align: center;text-transform: uppercase; display: block; color: white; position: relative;

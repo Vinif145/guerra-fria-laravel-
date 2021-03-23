@@ -1,5 +1,5 @@
 body{
-background:#eee;
+background:#05374e;
 }
 
 	header {
@@ -72,22 +72,24 @@ background:#eee;
 
 
 /* Header */
-
+  
 	#header {
 		background-attachment: scroll,							scroll,					fixed;
-		background-image: url('../img/top-3200.svg'), url('../img/poverlay.png'), url('../img/A Segunda Guerra Fria.png');
+		background-image: url('../img/top-3200.svg'), url('../img/poverlay2.png'), url('../img/A Segunda Guerra Fria.png');
 		background-position: bottom center,					top left,				center center;
 		background-repeat: repeat-x,						repeat,					no-repeat;
 		background-size: 3200px 460px,					auto,					cover;
-		color: rgba(255, 255, 255, 0.8);
-		padding: 10em 0 20em 0;
+        color: rgba(255, 255, 255, 0.8);
+		padding: 5em 0 20em 0;
 		position: relative;
 		text-align: center;
+        
+    
 	}
 
 		#header:before, #header:after {
 			background: rgba(224, 224, 224, 0.75);
-			content: '';
+			
 			left: 50%;
 			position: absolute;
 			width: 1px;
@@ -131,24 +133,6 @@ background:#eee;
 			color: #544d55;
 		}
 
-		#header .logo {
-			background: #4eb980;
-			border-radius: 100%;
-			color: #ffffff;
-			cursor: default;
-			display: inline-block;
-			font-size: 2.25em;
-			height: 2.35em;
-			line-height: 2.35em;
-			margin: 0 0 0.75em 0;
-			text-align: center;
-			width: 2.35em;
-		}
-
-			#header .logo.fa-paper-plane-o:before {
-				left: -0.075em;
-				position: relative;
-			}
 
 		#header h1 {
 			font-size: 2.5em;
@@ -160,6 +144,7 @@ background:#eee;
 			line-height: 1.5em;
 			margin: 0.25em 0 0 0;
 		}
+
 
 .timeline {
     position: relative;
@@ -250,7 +235,6 @@ background:#eee;
 .timeline-row .timeline-content h4 {
     margin: 0 0 20px 0;
     overflow: hidden;
-    white-space: nowrap;
     text-overflow: ellipsis;
     line-height: 150%;
 }
@@ -284,24 +268,24 @@ background:#eee;
 .timeline-row:nth-child(even) .timeline-content {
     background-color: #ff5000;
     /* Fallback Color */
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#fc6d4c), to(#ff5000));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#0996ac), to(#356264));
     /* Saf4+, Chrome */
-    background-image: -webkit-linear-gradient(top, #fc6d4c, #ff5000);
+    background-image: -webkit-linear-gradient(top, #0996ac, #356264);
     /* Chrome 10+, Saf5.1+, iOS 5+ */
-    background-image: -moz-linear-gradient(top, #fc6d4c, #ff5000);
+    background-image: -moz-linear-gradient(top, #0996ac, #356264);
     /* FF3.6 */
-    background-image: -ms-linear-gradient(top, #fc6d4c, #ff5000);
+    background-image: -ms-linear-gradient(top, #0996ac, #356264);
     /* IE10 */
-    background-image: -o-linear-gradient(top, #fc6d4c, #ff5000);
+    background-image: -o-linear-gradient(top, #0996ac, #356264);
     /* Opera 11.10+ */
-    background-image: linear-gradient(top, #fc6d4c, #ff5000);
+    background-image: linear-gradient(top, #0996ac, #356264);
     margin-left: 40px;
     text-align: left;
 }
 
 .timeline-row:nth-child(even) .timeline-content:after {
     left: -39px;
-    border-right: 18px solid #ff5000;
+    border-right: 18px solid #0996ac;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
 }
@@ -329,15 +313,15 @@ background:#eee;
     /* Fallback Color */
     background-image: -webkit-gradient(linear, left top, left bottom, from(#1379bb), to(#5a99ee));
     /* Saf4+, Chrome */
-    background-image: -webkit-linear-gradient(top, #1379bb, #5a99ee);
+    background-image: -webkit-linear-gradient(top, #1379bb, #436490);
     /* Chrome 10+, Saf5.1+, iOS 5+ */
-    background-image: -moz-linear-gradient(top, #1379bb, #5a99ee);
+    background-image: -moz-linear-gradient(top, #1379bb, #436490);
     /* FF3.6 */
-    background-image: -ms-linear-gradient(top, #1379bb, #5a99ee);
+    background-image: -ms-linear-gradient(top, #1379bb, #436490);
     /* IE10 */
-    background-image: -o-linear-gradient(top, #1379bb, #5a99ee);
+    background-image: -o-linear-gradient(top, #1379bb, #436490);
     /* Opera 11.10+ */
-    background-image: linear-gradient(top, #1379bb, #5a99ee);
+    background-image: linear-gradient(top, #1379bb, #436490);
     margin-right: 40px;
     margin-left: 0;
     text-align: right;
@@ -345,9 +329,18 @@ background:#eee;
 
 .timeline-row:nth-child(odd) .timeline-content:after {
     right: -39px;
-    border-left: 18px solid #1379bb;
+    border-left: 18px solid #436490;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
+}
+
+.responsive{
+    width: 100%;
+    height: auto;
+}
+
+.paraTime{
+    text-align: left;
 }
 
 @media (max-width: 767px) {

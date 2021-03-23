@@ -1,10 +1,10 @@
-@extends('includes.base')
+@extends('layouts.pages')
 
 @section('content')
 <div class="container" >
        <div class="row">
                  @foreach ($pages as $page)
-                 <a class="col-3" href="{{route('pages.slug', $page->slug)}}" style="text-decoration: none; color: black;"  >
+                 <a class="col-sm-3" href="{{route('pages.slug', $page->slug)}}" style="text-decoration: none; color: black;"  >
                         <article>
                                 <div class="row p-3">
 
