@@ -2,7 +2,7 @@
 @extends('layouts.pages')
 
 @section('content')
-<div class="container-lg">
+<div class="container-lg p-5 mt-3 pad-2 ">
       <div class="d-flex justify-content-center">
                  <div class="row">
                         <div class="col">   

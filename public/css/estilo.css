@@ -33,5 +33,9 @@ body{
         margin-right: -15px;
         max-width: none;
     }
+
+    .pad-2{
+      padding: .5rem!important;
+    }
 }
 
