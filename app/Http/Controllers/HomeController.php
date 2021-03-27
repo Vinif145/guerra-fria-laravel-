@@ -14,12 +14,14 @@ class HomeController extends Controller
     public function index()
     {
         $posts= \TCG\Voyager\Models\Post::paginate(2);
+
+        $pages= \TCG\Voyager\Models\Page::where('status', 1)->orderBy('title')->get();
         
         //$posts = \TCG\Voyager\Models\Post::all(); 
         //scopePublished
         $categories = \TCG\Voyager\Models\Category::all();
 
-        return view('index', ['posts'=> $posts, 'categorias'=> $categories]);
+        return view('index', ['posts'=> $posts, 'categorias'=> $categories, 'pages'=> $pages]);
     }
 
     /**

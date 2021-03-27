@@ -85,7 +85,7 @@
       </div>
    </div>
 
-
+      
     <!--TimeLine-->
     <div class="container bootdey" style="padding: unset!important">
     <div class="row gutters">
@@ -94,83 +94,6 @@
     <div class="card-body">
     <!-- Timeline start -->
     <div class="timeline">
-      <div class="timeline-row timeline-row-start">
-        <div class="timeline-dot fb-bg"></div>
-        <div class="timeline-content">
-            <img src="{{asset('img/QuedaMuroBerlim.jpg')}}" class="img-fluid responsive" alt="Responsive image">
-            <div class="timeline-text">
-                  <h4>Fim da URSS</h4>
-            <p>O colapso da União Soviética resultou no fim da Guerra Fria, e inaugurou uma nova fase no cenário internacional.</p>
-            <a href="{{route('pages.slug', 'fim-da-urss')}}" class="btn btn-secondary marginL">Veja Mais</a>
-            </div>
-        </div>
-      </div>
-      <div class="timeline-row timeline-row-start">
-        <div class="timeline-dot fb-bg"></div>
-        <div class="timeline-content">
-            <img src="{{asset('img/EuaFlag.jpg')}}" class="img-fluid" alt="Responsive image">
-          <div class="timeline-text">
-                <h4>Expansão dos EUA</h4>
-          <p>A Expansão norte-americana após o fim da União Soviética.</p>
-          <a href="{{route('pages.slug', 'expansao-eua')}}" class="btn btn-secondary marginL">Veja Mais</a>
-                </div>
-        </div>
-      </div>
-      <div class="timeline-row timeline-row-start">
-        <div class="timeline-dot fb-bg"></div>
-        <div class="timeline-content">
-            <img src="{{asset('img/flagEua.jpg')}}" class="img-fluid" alt="Responsive image">
-          <div class="timeline-text">
-                <h4>Porque se Expandir?</h4>
-          <p>O novo papel dos Estados Unidos no cenário internacional e suas implicações.</p>
-          <a href="{{route('pages.slug', 'porque-se-expandir')}}" class="btn btn-secondary marginL">Veja Mais</a>
-                </div>
-        </div>
-      </div>
-      <div class="timeline-row timeline-row-start">
-        <div class="timeline-dot fb-bg"></div>
-        <div class="timeline-content">
-            <img src="{{asset('img/Regime-Change_in_Venezuela.jpg')}}" class="img-fluid" alt="Responsive image">
-          <div class="timeline-text">
-                <h4>Regime Change</h4>
-          <p>Uma técnica de "defesa" incomum, mas que se adequa ao pós-Guerra Fria.</p>
-          <a href="{{route('pages.slug', 'regime-change')}}" class="btn btn-secondary marginL">Veja Mais</a>
-                </div>
-        </div>
-      </div>
-      <div class="timeline-row timeline-row-start">
-        <div class="timeline-dot fb-bg"></div>
-        <div class="timeline-content">
-            <img src="{{asset('img/ucrania_map.png')}}" class="img-fluid" alt="Responsive image">
-          <div class="timeline-text">
-                  <h4>A Ucrânia como palco da Segunda Guerra Fria </h4>
-            <p>Ucrânia dentro de um complexo triângulo geopolítico.</p>
-            <a href="{{route('pages.slug', 'ucrania-guerra-fria-2')}}" class="btn btn-secondary marginL">Veja Mais</a>
-          </div>
-        </div>
-      </div>
-      <div class="timeline-row timeline-row-start">
-        <div class="timeline-dot fb-bg"></div>
-        <div class="timeline-content">
-            <img src="{{asset('img/ucrania_crise.jpg')}}" class="img-fluid responsive" alt="Responsive image">
-          <div class="timeline-text">
-                  <h4>Crise Ucraniana </h4>
-            <p>Como a história da Ucrânia reflete as mudanças globais.</p>
-            <a href="{{route('pages.slug', 'crise-ucraniana')}}" class="btn btn-secondary marginL">Veja Mais</a>
-          </div>
-        </div>
-      </div>
-      <div class="timeline-row timeline-row-start">
-        <div class="timeline-dot fb-bg"></div>
-        <div class="timeline-content">
-            <img src="{{asset('img/ucrania-crise-2.jpg')}}" class="img-fluid responsive" alt="Responsive image">
-          <div class="timeline-text">
-                  <h4>O desenrolar na Ucrânia </h4>
-            <p>Entenda como continuou a dinâmica da crise ucraniana e seus múltiplos personagens.</p>
-            <a href="{{route('pages.slug', 'o-desenrolar-na-ucrania')}}" class="btn btn-secondary marginL">Veja Mais</a>
-          </div>
-        </div>
-      </div>
       <div class="timeline-row timeline-row-start">
         <div class="timeline-time">
           7:45PM<small>May 21</small>
@@ -185,6 +108,21 @@
                 </div>
         </div>
       </div>
+      @foreach ($pages as $page)    
+
+      <div class="timeline-row timeline-row-start">
+        <div class="timeline-dot fb-bg"></div>
+        <div class="timeline-content">
+            <img src="{{Voyager::image($page->image)}}" class="img-fluid responsive" alt="Responsive image">
+            <div class="timeline-text">
+                  <h4>{{ $page->title }}</h4>
+                  <p>{!! $page->excerpt !!}</p>           
+          <a href="{{route('pages.slug', $page->slug)}}" class="btn btn-secondary marginL">Veja Mais</a>
+            </div>
+        </div>
+      </div>
+          
+      @endforeach   
     </div>
     <!-- Timeline end -->
     </div>
