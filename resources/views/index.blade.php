@@ -277,6 +277,7 @@
             
           </div>
           <div class="modal-body">
+           @if($categoriaEUA)
            @foreach ($categoriaEUA->posts as $post)
                        <article class="text-center" id="article-modal">
                                 <a class="row mb-3" href="{{route('posts.slug', $post->slug)}}" style="text-decoration: none; color: black;"  >
@@ -291,6 +292,7 @@
                         </article>
 
           @endforeach
+          @endif
           </div>
         </div>
       </div>
@@ -307,6 +309,7 @@
             
           </div>
           <div class="modal-body">
+        @if($categoriaRussia)
            @foreach ($categoriaRussia->posts as $post)
                        <article class="text-center">
                                 <a class="row mb-3" href="{{route('posts.slug', $post->slug)}}" style="text-decoration: none; color: black;"  >
@@ -319,6 +322,7 @@
                                 </a>
                         </article>
           @endforeach
+        @endif
           </div>
         </div>
       </div>
