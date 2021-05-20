@@ -13,7 +13,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = \TCG\Voyager\Models\Post::paginate(2); 
+        $posts = \TCG\Voyager\Models\Post::paginate(3); 
         //scopePublished
         $categories = \TCG\Voyager\Models\Category::all();
 
@@ -59,7 +59,26 @@ class PostController extends Controller
     {
         $category = \TCG\Voyager\Models\Category::where('slug', $slug)->first();
 
-        return view('posts.category', ['category'=> $category]);
+        /*$posts = \TCG\Voyager\Models\Post::where('category', $category)->paginate(2);*/
+
+        $posts = $category->posts()->paginate(3);
+
+       
+
+        return view('posts.category', ['category'=> $category, 'posts'=>$posts]);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $author_id
+     * @return \Illuminate\Http\Response
+     */
+    public function authorIndex($author_id)
+    {
+        $posts = \TCG\Voyager\Models\Post::where('author_id', $author_id)->paginate(2);
+
+        return view('posts.author', ['posts'=>$posts]);
     }
 
 

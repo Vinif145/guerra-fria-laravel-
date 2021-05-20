@@ -4,6 +4,23 @@ section {
  html, body {
 	 overflow-x: hidden;
 }
+
+.this{
+    
+    background-image: url('../img/overlay.png');
+    float: left;
+    opacity: 0.5;
+    height: 4127px;
+    width: 12.5%;
+}
+.this2{
+    
+    background-image: url('../img/overlay.png');
+    float: right;
+    opacity: 0.5;
+    height: 75%;
+    width: 12.5%;
+}
  body {
 	 font-family: 'Roboto';
 	 font-size: 17px;

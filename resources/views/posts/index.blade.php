@@ -1,31 +1,27 @@
-@extends('layouts.base')
+@extends('layouts.posts')
 
 @section('content')
 <div class="container" >
        <div class="row">
                
                 @foreach ($posts as $post)
+                 <a class="col-sm-4" href="{{route('posts.slug', $post->slug)}}" style="text-decoration: none; color: black;"  >
                         <article>
-                                <a class="row mb-3" href="{{route('posts.slug', $post->slug)}}" style="text-decoration: none; color: black;"  >
-                                        <div class="col-sm-4" style="padding: unset">
-                                        <img src="{{Voyager::image($post->image)}}" class="img-fluid" alt="Responsive image">
-                                        </div> 
+                                <div class="row p-3">
 
-                                        <div class="col-sm-8">               
-                                                <h1>{{ $post->title }}</h1>
-                                                <p>{!! $post->excerpt !!}</p>
-                                                <p>{{ $post->authorId->name}}</P>
-                                                <p>{{ $post->slug}}</P>
-                                        </div>
-                                </a>
+                                        <img src="{{Voyager::image($post->image)}}" class="img-fluid" alt="Responsive image" style="padding: unset">
+                                        <h1>{{ $post->title }}</h1>
+                                        <p>{!! $post->excerpt !!}</p>
+                                        
+                                </div>
                         </article>
-                @endforeach     
+                </a>     
+                @endforeach
 
                 {{ $posts->links() }}
 
                 @foreach ($categorias as $categoria)
-                      
-                       <a class="btn btn-primary" href="{{route('categories.slug', $categoria->slug)}}" role="button"> {{ $categoria->name }}</a>
+                  <a class="btn btn-primary" href="{{route('categories.slug', $categoria->slug)}}" role="button"> {{ $categoria->name }}</a>
                 @endforeach     
         </div>
 </div>

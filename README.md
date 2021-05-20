@@ -1,62 +1,112 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# A Segunda Guerra Fria
+###  Projeto desenvolvido durante o TCC 
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+ <a href="#-sobre-o-projeto">Sobre</a> •
+ <a href="#-como-executar-o-projeto">Como executar</a> • 
+ <a href="#-tecnologias">Tecnologias</a> •  
+ <a href="#user-content--licença">Licença</a>
 </p>
 
-## About Laravel
+## 💻 Sobre o projeto
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Guerra Fria 2.0 - O projeto pretende explicar o conteúdo escrito de uma maneira mais fácil e abrangente. Discute a respeito de uma segunda guerra fria, uma teoria geopolítica.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🚀 Como executar o projeto
 
-## Learning Laravel
+### Pré-requisitos
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: [Git](https://git-scm.com), [Laravel](https://laravel.com/docs/8.x/installation).
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+### 🎲 Rodando o Projeto 
 
-## Laravel Sponsors
+#### Instalando as dependências
+```bash
+# Clone este repositório
+$ git clone https://github.com/Vinif145/guerra-fria-laravel-.git
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+# Acesse a pasta do projeto no terminal/cmd
+$ cd guerra-fria-laravel-
 
-### Premium Partners
+# Instale as dependências composer
+$ composer install
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
+```
+#### Configurando o projeto
+1. Faça uma cópia do arquivo `.env.example` e renomeie para `.env`:
+2. Crie um banco de dados
+> Sugestão MariaDB ou MySQL: definição de collation: **utf8mb4_general_ci**
 
-## Contributing
+3. Configure a conexão com os dados do banco de dados no arquivo `.env`:
+```php  
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=NOMEDOBANCO
+    DB_USERNAME=USUARIO
+    DB_PASSWORD=SENHA
+```
+#### Rodando o servidor
+```bash    
+# Criação de nova chave de criptografia da aplicação:
+php artisan key:generate
+    
+# Criação das tabelas e inserção dos dados no banco de dados:
+php artisan migrate:fresh --force --seed
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# Para criar o link simbólico, para usar o storage(armazenamento de arquivos):
 
-## Code of Conduct
+php artisan storage:link
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+# Execute a aplicação em modo de desenvolvimento
+php artisan serve
 
-## Security Vulnerabilities
+# O servidor iniciará na porta:8000 - acesse <http://localhost:8000>
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 🎲 Acesso ao Projeto (servidor)
+Acesso à área pública da aplicação:
+> **URL:** http://domínio/
 
-## License
+Acesso à área privada da aplicação:
+> **URL:** http://domínio/admin <br/> 
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+**Criar usuário pelo terminal usando tinker:**
+```bash
+# Executar o tinker
+php artisan tinker
+
+# No tinker: 
+>>> $user = new \App\Models\User;
+>>> $user->email = 'admin@admin.com';
+>>> $user->password = Hash::make('senha'); # altere 'senha' para uma senha forte
+>>> $user->name = 'Nome do Administrator';
+>>> $user->save();
+>>> exit() # sair do tinker
+```
+---
+## 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Laravel](https://laravel.com/docs)
+- [Bootstrap](https://getbootstrap.com/)
+- [JQuery](https://jquery.com/)
+
+As seguintes dependências foram incluidas no projeto:
+- [Voyager](https://github.com/the-control-group/voyager)
+
+---
+## 💪 Como contribuir para o projeto
+
+1. Faça um **fork** do projeto.
+2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
+3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My new feature"`
+4. Envie as suas alterações: `git push origin my-feature`
+
+## 📝 Licença
+
+Este projeto é um software de código aberto licenciado sob a licença [gnu general public license version 3.0 (gplv3)](./LICENSE).

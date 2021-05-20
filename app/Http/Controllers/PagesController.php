@@ -12,8 +12,8 @@ class PagesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $pages = \TCG\Voyager\Models\Page::all();
+    {   
+        $pages = \TCG\Voyager\Models\Page::paginate(6); 
 
         return view('pages.index', ['pages'=> $pages]);
     }
@@ -40,6 +40,19 @@ class PagesController extends Controller
         $author = \TCG\Voyager\Models\User::where('id', $page->author_id)->first(); 
         
         return view('pages.show', ['page'=> $page, 'author'=> $author]);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $role_id
+     * @return \Illuminate\Http\Response
+     */
+    public function authorIndex($role_id)
+    {
+        $pages = \TCG\Voyager\Models\Page::where('author_id', $role_id)->paginate(6);
+
+        return view('pages.author', ['pages'=>$pages]);
     }
 
 }

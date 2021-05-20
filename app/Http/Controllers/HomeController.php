@@ -15,13 +15,45 @@ class HomeController extends Controller
     {
         $posts= \TCG\Voyager\Models\Post::paginate(2);
 
+        $pages= \TCG\Voyager\Models\Page::where('status', 1)->orderBy('created_at')->get();
+        
+        //$posts = \TCG\Voyager\Models\Post::all(); 
+        //scopePublished
+        $categories = \TCG\Voyager\Models\Category::all();
+
+        $categoriaEUA = \TCG\Voyager\Models\Category::where('slug', 'eua')->first();
+
+        $categoriaRussia = \TCG\Voyager\Models\Category::where('slug', 'russia')->first();
+
+        return view('index', ['posts'=> $posts, 'categorias'=> $categories, 'pages'=> $pages, 'categoriaEUA'=> $categoriaEUA, 'categoriaRussia'=> $categoriaRussia]);
+    }
+
+    public function index2()
+    {
+        $posts= \TCG\Voyager\Models\Post::paginate(2);
+
         $pages= \TCG\Voyager\Models\Page::where('status', 1)->orderBy('title')->get();
         
         //$posts = \TCG\Voyager\Models\Post::all(); 
         //scopePublished
         $categories = \TCG\Voyager\Models\Category::all();
 
-        return view('index', ['posts'=> $posts, 'categorias'=> $categories, 'pages'=> $pages]);
+        $categoriaEUA = \TCG\Voyager\Models\Category::where('slug', 'eua')->first();
+
+        return view('index-backup', ['posts'=> $posts, 'categorias'=> $categories, 'pages'=> $pages, 'categoriaEUA'=> $categoriaEUA]);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $slug
+     * @return \Illuminate\Http\Response
+     */
+    public function slugCategory($slug)
+    {
+        $category = \TCG\Voyager\Models\Category::where('slug', $slug)->first();
+
+        return view('index', ['category'=> $category]);
     }
 
     /**

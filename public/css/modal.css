@@ -1,0 +1,13 @@
+#article-modal{
+    background-color:hsl(200deg 44% 70%);
+    margin-bottom: 1rem;
+}
+
+.modal-body{
+    background-color: #0c1229;
+}
+
+.modal-header{
+    background-color:hsl(200deg 44% 70%);
+}
+

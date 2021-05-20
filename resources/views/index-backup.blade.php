@@ -11,13 +11,9 @@
     
       <!-- JavaScript Bundle with Popper -->
       <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> -->
+      <link href="{{ asset('css/estilo2.css') }}" rel="stylesheet"><!--Nossa própria folha de estilo -->
       <link href="{{ asset('css/mapa.css') }}" rel="stylesheet"><!--Mapa -->
       <link href="{{ asset('css/header.css') }}" rel="stylesheet"><!--Header -->
-      <link href="{{ asset('css/timeline.css') }}" rel="stylesheet"><!--Nossa própria folha de estilo -->
-      <link href="{{ asset('css/tooltip.css') }}" rel="stylesheet"><!--Tooltip -->
-      <link href="{{ asset('css/modal.css') }}" rel="stylesheet"><!--Tooltip -->
-      <link href="{{ asset('css/timeline-responsivo.css') }}" rel="stylesheet"><!--Nossa própria folha de estilo -->
-      <link href="{{ asset('css/footer.css') }}" rel="stylesheet"><!--Nossa própria folha de estilo -->
 
 @endsection
 
@@ -52,7 +48,6 @@
 @endsection
      
 @section('header')
-       <span id='topo'></span>
        <div id="header">
 				<img src="{{asset('img/RainhaHeader.webp')}}" class="img-fluid" alt="Responsive image">
 				<div class="position-absolute top-50 start-50 translate-middle triade" style="width: -webkit-fill-available;">
@@ -63,189 +58,86 @@
 
 
     <div class="container-fluid" id="slogam">
-        <div id="wpbs" class="Grad">
-        <header class="hid" style="opacity: 1;">
-            <div class="banner hid" style="opacity: 1;">
-                <img class="left img-fluid" src="{{asset('img/TorreHeader.svg')}}">
-                <h1>Veja porque você está vivendo uma Guerra Fria.</h1>
-                <img class="right img-fluid" src="{{asset('img/TorreHeader.svg')}}">
-            </div>
-        </header>  
-        </div>                               
+      <div class="row ">
+        <div class="col" style="margin: 3% 8% 2%">
+            <h3 style="color: #FFFFFF; text-align: center">
+              Entenda porque você está vivendo uma Guerra Fria, e como isso impacta todo o mundo.
+            </h3>
+        </div>                                           
+      </div>
     </div>
     
 @endsection
 
 @section('content')
-    <div id="wpbs">
-        <div class="scrollDir hid" style="opacity: 1;">Scroll<br>
-            <span>
-                <img src="https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/scroll-command.png" height="54" width="24">
-            </span>
+    <div class="container-fluid Grad" style="margin: unset!important; padding:unset!important">
+      <div class="row p-3">
+        <div class="col-lg-6 ">               
+          <img src="{{asset('img/xadrezCanvasG.jpg')}}" class="img-fluid" alt="Responsive image">
+                                                      
         </div>
+        <div class="col-lg-6" id="bs-gutter">               
+          <h4 style="color: #FFFFFF; padding: 12pt 0;">
+            Para entender o que seria uma Guerra Fria, podemos pensar em um tabuleiro de Xadrez. 
+            Imagine o mundo como um grande tabuleiro, onde países são peças, como torres, cavalos, reis e rainhas. </br></br>
+            Obviamente o mundo é muito mais complexo que um tabuleiro de xadrez comum, há vários blocos militares, econômicos, 
+            alianças não muito claras, e cada um interpreta o “jogo” de um jeito. 
+            Mas assim fica mais fácil de entender.</br></br>
+            Essa maneira de ver as relações internacionais, entre países, continentes, é chamada de Tabuleiro Geopolítico. 
+            E assim como muitos jogos de tabuleiro, como o de dama, xadrez, as pessoas entendem o jogo de um jeito. 
+            Olhar para o planeta agora e dizer que está acontecendo uma nova Guerra Fria, uma Segunda Guerra Fria, 
+            é uma maneira de enxergar. 
+          </h4>
+                                                      
+        </div>
+      </div>
+   </div>
 
-        <div class="container" >
-            <div class="row text-center">
-                <div class="col ">               
-                <img src="{{asset('img/xadrezCanvasG.jpg')}}" class="img-fluid" id="img-header" alt="Responsive image">
-                </div>
-                
+    <!--TimeLine-->
+    <div class="container bootdey" style="padding: unset!important">
+    <div class="row gutters TimeConcertoRow">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: unset!important">
+    <div class="card Grad2">
+    <div class="card-body">
+    <!-- Timeline start -->
+    <div class="timeline">
+      
+      @foreach ($pages as $page)    
+
+      <div class="timeline-row timeline-row-start">
+        <div class="timeline-dot fb-bg"></div>
+        <div class="timeline-content">
+            <img src="{{Voyager::image($page->image)}}" class="img-fluid responsive" alt="Responsive image">
+            <div class="timeline-text">
+                  <h4>{{ $page->title }}</h4>
+                  <p>{!! $page->excerpt !!}</p>           
+          <a href="{{route('pages.slug', $page->slug)}}" class="btn btn-secondary marginL">Veja Mais</a>
             </div>
         </div>
-
-        <section class="intro">
-            <p>Para entender o que seria uma Guerra Fria, podemos pensar em um tabuleiro de Xadrez. 
-            Imagine o mundo como um grande tabuleiro, onde países são peças, como torres, cavalos, reis e rainhas. </P>
-            <p>Obviamente o mundo é muito mais complexo que um tabuleiro de xadrez comum, há vários blocos militares, econômicos, 
-            alianças não muito claras, e cada um interpreta o “jogo” de um jeito. 
-            Mas imaginar um tabuleiro de xadrez torna compreensivo.</p>
-            <p>Essa maneira de ver as relações internacionais, entre países, continentes, é chamada de Tabuleiro Geopolítico. 
-            E como muitos jogos de tabuleiro, como o de dama, o próprio xadrez, há várias maneiras de interpretar o jogo. 
-            Olhar para o 
-            <span class="mytooltip tooltip-effect-1"> <span class="tooltip-item">sistema internacional</span> <span class="tooltip-content"> <span class="tooltip-text"><span class="title-tooltip">Sistema Internacional- </span> ou ainda</span> </span> </span>agora e dizer que está acontecendo uma nova Guerra Fria, uma Segunda Guerra Fria, 
-            é uma maneira de enxergar.
-            
-            <p class="branding">
-                <a href="http://channel.nationalgeographic.com/killing-reagan/" target="_blank">
-                    <img src="https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/show-logo.png" width="220">
-                </a>
-                <a href="http://channel.nationalgeographic.com/" target="_blank">
-                    <img src="https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/ng-logo.png" width="175">
-                </a>
-            </p>
-
-            <section id="timelineKey" class="hid" style="opacity: 1;">
-                <h3>Timeline Key</h3>
-                <span class="reagan hid" style="opacity: 1;">Reagan</span>
-                <span class="hinckley hid" style="opacity: 1;">Hinckley</span>
-                <span class="hid converge" style="opacity: 1;">Convergence</span>
-                <span class="mask" style="opacity: 1;"></span>
-            </section>
-        </section>
-        <div id="timelineLine" style="height: 4224.55px;"></div>
-
-        <section class="timeline">
-            @foreach ($pages as $index=>$page) 
-            <a href="{{route('pages.slug', $page->slug)}}">   
-             <article class="era era1910 active @if($index%2!=0) right @endif" style="opacity: 1; margin-top: -50px;">
-                <div class="crop">
-                    <img src="{{Voyager::image($page->image)}}" class="img-fluid responsive" alt="Responsive image">
-                </div>
-                <span>{{\Carbon\Carbon::parse($page->created_at)->format('d/m/Y')}}</span> <!--Image Caption-->
-                <div class="line"></div>
-                <div>
-                    <h2>{{ $page->title }}</h2><!-- title -->
-                    <p>{!! $page->excerpt !!}</p><!-- detail -->
-                </div>
-            </article>
-            </a>
+      </div>
           
-           @endforeach  
-            
-            
-            <article class="right era era1950" style="opacity: 1; margin-top: -50px;">
-                <div class="crop">
-                    <img src="https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/1952-03-04.png">
+      @endforeach  
+      <div class="timeline-row timeline-row-start">
+        <div class="timeline-time">
+          7:45PM<small>May 21</small>
+        </div>
+        <div class="timeline-dot fb-bg"></div>
+        <div class="timeline-content">
+            <img src="http://localhost:8000/storage/posts/post1.jpg" class="img-fluid" alt="Responsive image">
+          <div class="timeline-text">
+                <h4>Admin theme!</h4>
+          <p>Milestone Admin Dashboard contains C3 graphs, flot graphs, data tables, calendar, drag &amp; drop and ion slider.</p>
+          <a href="#" class="btn btn-secondary marginL">Veja Mais</a>
                 </div>
-                <span>March 4, 1952</span> <!--Image Caption-->
-                <div class="line"></div>
-                <div>
-                    <h2>A Hollywood love story </h2><!-- title -->
-                    <p>Nancy Davis and Ronald Reagan met in 1951 while Reagan was president of the Screen Actors Guild. Confusion ensued when another Nancy Davis, an aspiring actress, had been blacklisted in Hollywood as a possible communist sympathizer. The future Mrs. Reagan's appeal to Reagan to clear her name eventually resulted in a proposal.</p><!-- detail -->
-                </div>
-            </article>
-            <article class="hinckley" style="opacity: 1; margin-top: -50px;">
-                <div class="crop">
-                    <img src="https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/1955-05-29.png">
-                </div>
-                <span>May 29, 1955</span> <!--Image Caption-->
-                <div class="line"></div>
-                <div>
-                    <h2>Troubled in Texas</h2><!-- title -->
-                    <p>Nearly forty years after Reagan's birth, another man who would shape the course of history, John Hinckley, Jr., was born in Ardmore, Oklahoma. At a young age, he moved with his wealthy family to Texas. As early as his teenage years, Hinckley displayed tendencies of depression and mental illness, shunning traditional high school activities and social circles.</p><!-- detail -->
-                </div>
-            </article>
-            <article class="hinckley right era era1970 clipping" style="opacity: 1; margin-top: -50px;">
-                <div class="crop">
-                    <img src="https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/1976.png">
-                </div>
-                <span>1976</span> <!--Image Caption-->
-                <div class="line"></div>
-                <div>
-                    <h2>A growing obsession</h2><!-- title -->
-                    <p>After developing an obsession with the 1976 film "Taxi Driver" and its leading actress, Jodie Foster, Hinckley began compulsively penning letters to the Hollywood starlet. Inspired by the movie's plot line, he devised a plan to rise to fame in the public eye in order to attract the attention of the object of his desire. A presidential assassination plot was born out of delusional visions of grandeur.</p><!-- detail -->
-                    <em class="detail">View&nbsp;paper&nbsp;&gt;</em>
-                </div>
-            </article>
-            <article class="hinckley era era1980" style="opacity: 1; margin-top: -50px;">
-                <div class="crop">
-                    <img src="https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/1980-10-09.png">
-                </div>
-                <span>October 9, 1980</span> <!--Image Caption-->
-                <div class="line"></div>
-                <div>
-                    <h2>Carter's close call</h2><!-- title -->
-                    <p>Hinckley got within arm's reach of President Jimmy Carter at a re-election campaign event in Dayton, Ohio. A week later, he was arrested on a weapons charge in Nashville, Tennessee—the same day Carter was campaigning there. An arrest was made, but Hinckley was neither photographed nor fingerprinted, and the Secret Service was not informed of the incident.</p><!-- detail -->
-                </div>
-            </article>
-            <article class="right clipping" style="opacity: 1; margin-top: -50px;">
-                <div class="crop">
-                    <img src="https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/1980-11-04.png">
-                </div>
-                <span>November 4, 1980</span> <!--Image Caption-->
-                <div class="line"></div>
-                <div>
-                    <h2>Winning the White House</h2><!-- title -->
-                    <p>Having been previously denied the Republican presidential nomination twice before, Reagan was finally granted a chance at bat for America's highest office in 1980. He ultimately secured 51 percent of the popular vote and became the oldest elected President of the United States at 69 years of age.</p><!-- detail -->
-                    <em class="detail">View&nbsp;paper&nbsp;&gt;</em>
-                </div>
-            </article>
-            <article class="hinckley noShrink skinny-clipping" style="opacity: 1; margin-top: -50px;">
-                <div class="crop">
-                    <img src="https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/1980-12-08.png">
-                </div>
-                <span>December 8, 1980</span> <!--Image Caption-->
-                <div class="line"></div>
-                <div>
-                    <h2>Death of an idol</h2><!-- title -->
-                    <p>News of John Lennon's murder devastated Hinckley, and firmed his resolve. He wrote in his diary: "John Lennon is dead. Forget it. It's just going to be insanity. I still think about Jodie all the time. Anything I might do in 1981 would be solely for Jodie Foster's sake. I want to tell the world that I love her."</p><!-- detail -->
-                    <em class="detail">View&nbsp;paper&nbsp;&gt;</em>
-                </div>
-            </article>
-            <article class="featured" style="opacity: 1; margin-top: -30px;">
-                <img src="https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/1981-03-30.png">
-                <span>March 30, 1981</span> <!--Image Caption-->
-                <div>
-                    <h2>Attempt at an assassination</h2><!-- title -->
-                    <p>Hinckley fired six shots in an ambush on President Reagan outside the Washington Hilton. Four men were caught in the crossfire. The most seriously injured was press secretary James Brady, who was struck in the head. Revolutionary near-real-time television footage brought the attack into the homes of millions of Americans. President Reagan survived, though a bullet punctured a lung and narrowly missed his heart. According to reports, he later stated to Nancy, "Honey, I forgot to duck."</p><!-- detail -->
-                </div>
-            </article>
-            <article style="opacity: 1; margin-top: -50px;">
-                <div class="crop">
-                    <img src="https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/1981-03-30b.png">
-                </div>
-                <span>March 30, 1981</span> <!--Image Caption-->
-                <div class="line"></div>
-                <div>
-                    <h2>Chaos at the helm </h2><!-- title -->
-                    <p>With the president hospitalized and Vice President George Bush out of town, Al Haig asserted that as Secretary of State, he was in charge. (Actually, he was fourth in succession.) With the victims' fates and shooter's identity still unknown—was it a Soviet plot?—nerves were frayed in the White House, in the press and in the nation at large.</p><!-- detail -->
-                </div>
-            </article>
-            <article class="right" style="opacity: 1; margin-top: -50px;">
-                <div class="crop">
-                    <img src="https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/1981-1982.png">
-                </div>
-                <span>1981–1982</span> <!--Image Caption-->
-                <div class="line"></div>
-                <div>
-                    <h2>A ‘Reaganomics' roller coaster</h2><!-- title -->
-                    <p>The assassination attempt shot Reagan's approval ratings through the roof to 70 percent; his first post-shooting appearance before Congress earned him a hero's welcome, and helped him pass his economic package through a Democratic-controlled House. A year later, as the economy faltered and the unemployment rate spiked above 10 percent, Reagan's approval rating fell to 35 percent.</p><!-- detail -->
-                </div>
-            </article>
-            
-            
-        </section>
-</div>
+        </div>
+      </div> 
+    </div>
+    <!-- Timeline end -->
+    </div>
+    </div>
+    </div>
+    </div>
+  </div>
   
   
 
@@ -266,64 +158,36 @@
             </div>
         </div>
     </button>
-    <button type="button" class="btn btn-primary map-point" data-bs-toggle="modal" data-bs-target="#exampleModal" title="EUA" style="top:39%;left:22%"></button>
+    <button type="button" class="btn btn-primary map-point" data-bs-toggle="modal" data-bs-target="#exampleModal" style="top:39%;left:22%"></button>
 
    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable ">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title cor" id="exampleModalLabel">Estados Unidos</h1>
-            <button type="button" class=" btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            
+            <h5 class="modal-title cor" id="exampleModalLabel">Estados Unidos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
            @foreach ($categoriaEUA->posts as $post)
-                       <article class="text-center" id="article-modal">
+                       <article>
                                 <a class="row mb-3" href="{{route('posts.slug', $post->slug)}}" style="text-decoration: none; color: black;"  >
-                                        <div class="col"> 
-                                            
-                                                <img src="{{Voyager::image($post->image)}}" class="img-fluid" alt="Responsive image">  
+                                        <div class="col-sm-4" style="padding: unset">
+                                        <img src="{{Voyager::image($post->image)}}" class="img-fluid" alt="Responsive image">
+                                        </div> 
+
+                                        <div class="col-sm-8">               
                                                 <h1>{{ $post->title }}</h1>
-                                                <h3>{!! $post->excerpt !!}</h3>
-                                                
+                                                <p>{!! $post->excerpt !!}</p>
+                                                <p>{{ $post->slug}}</P>
                                         </div>
                                 </a>
                         </article>
-
           @endforeach
           </div>
         </div>
       </div>
    </div>
   
-  <button type="button" class="btn btn-primary map-point" data-bs-toggle="modal" data-bs-target="#russia" title="Rússia" style="top:25%;left:70%"></button>
-
-   <div class="modal fade" id="russia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-scrollable ">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title cor" id="exampleModalLabel">Rússia</h1>
-            <button type="button" class=" btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            
-          </div>
-          <div class="modal-body">
-           @foreach ($categoriaRussia->posts as $post)
-                       <article class="text-center">
-                                <a class="row mb-3" href="{{route('posts.slug', $post->slug)}}" style="text-decoration: none; color: black;"  >
-                                        <div class="col"> 
-                                            <img src="{{Voyager::image($post->image)}}" class="img-fluid" alt="Responsive image">              
-                                                <h1>{{ $post->title }}</h1>
-                                                <h3>{!! $post->excerpt !!}</h3>
-                                                
-                                        </div>
-                                </a>
-                        </article>
-          @endforeach
-          </div>
-        </div>
-      </div>
-   </div>
-
     <button class="map-point" style="top:35%;left:50%">
         <div class="content">
             <div class="centered-y">
@@ -340,7 +204,14 @@
             </div>
         </div>
     </button>
-    
+    <button class="map-point" style="top:45%;left:16%">
+        <div class="content">
+            <div class="centered-y">
+                <h2>Logan's Mum</h2>
+                <p>I&rsquo;m a marshmallow</p>
+            </div>
+        </div>
+    </button>
     <button class="map-point" style="top:60%;left:53%">
         <div class="content">
             <div class="centered-y">
@@ -349,7 +220,14 @@
             </div>
         </div>
     </button>
-    
+    <button class="map-point" style="top:25%;left:70%">
+        <div class="content">
+            <div class="centered-y">
+                <h2>With Love</h2>
+                <p>&mdash; 007</p>
+            </div>
+        </div>
+    </button>
 </div>
 <p class="description">It&rsquo;s been brought to my attention that OSX/Safari doesn&rsquo;t support :active for buttons with default settings, so you guys will have to resort to JS or hold down your mouse button to keep :focus triggered.</p>
 
@@ -360,7 +238,7 @@
 @endsection
 
 @section('footer')
-  @includeIf('layouts.components.footer2')
+  @includeIf('layouts.components.footer')
 @endsection
 
 @section('javascript')
@@ -418,7 +296,16 @@
   </script>
   
    <script> 
- 
+      $(document).ready( () => {     
+      var menu1 = $(".menu_show");
+      $(document).scroll( function() {
+          var scroll = $(document).scrollTop();
+          if(scroll > 130 )  $(".menu_show").fadeIn();
+           if(scroll <= 120  ) $(".menu_show").fadeOut();
+      });       
+      });
    </script>
 
 @endsection
+
+ 

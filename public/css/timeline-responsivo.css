@@ -1,0 +1,807 @@
+
+
+#wpbs {
+	min-width: 320px;
+	overflow: hidden;
+	background-color: #0c1229;
+	/*font-family: proxima_nova_altregular, sans-serif*/
+}
+
+#wpbs * {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}
+
+#wpbs .wpv-headline {
+	display: none!important
+}
+
+#wpbs ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none
+}
+
+#wpbs .hid {
+	opacity: 0;
+}
+
+#wpbs .color {
+	 background-color: #611818;
+}
+
+
+#wpbs header {
+	width: 100%;
+	text-transform: uppercase;
+	overflow: hidden
+}
+
+@media (max-width:480px) {
+	#wpbs header {
+		margin-top: -44px;
+		background-position: center center
+	}
+}
+
+#wpbs header div.banner {
+	color: #fff;
+    padding-top: 0.5rem;
+    position: relative;
+    margin: auto;
+    background: #611818;
+    width: 840px;
+    height: 124px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+@media (max-width:992px) {
+	#wpbs header div.banner {
+		width: 640px;
+		height: 145px
+	}
+}
+
+@media (max-width:768px) {
+	#wpbs header div.banner {
+		top: 0px;
+		height: auto;
+		width: 100%;
+		border-radius: 0
+	}
+}
+
+@media (max-width:480px) {
+	#wpbs header div.banner {
+		top: 56px;
+		height: 287px;
+	}
+}
+
+#wpbs header div.banner img {
+	position: absolute;
+	top: 29px;
+	height: 42px;
+	width: 42px;
+	padding: 0;
+	margin: 0
+}
+
+@media (max-width:992px) {
+	#wpbs header div.banner img {
+		height: 21px;
+		width: 21px;
+		top: 25px
+	}
+}
+
+#wpbs header div.banner img.left {
+	left: 29px
+}
+
+@media (max-width:992px) {
+	#wpbs header div.banner img.left {
+		left: 18px
+	}
+}
+
+@media (max-width:768px) {
+	#wpbs header div.banner img.left {
+		position: relative;
+		top: 15px;
+		height: 42px;
+		width: 42px;
+		left: 1rem;
+		margin-left: -21px
+	}
+}
+
+#wpbs header div.banner img.right {
+	right: 29px
+}
+
+@media (max-width:992px) {
+	#wpbs header div.banner img.right {
+		right: 18px
+	}
+}
+
+@media (max-width:768px) {
+	#wpbs header div.banner img.right {
+		display: none
+	}
+}
+
+#wpbs header div.banner h1 {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	font-family: ralewayblack;
+	font-size: 45px;
+	text-align: center;
+	line-height: 58px;
+	box-sizing: border-box
+}
+
+@media (min-width:768px) {
+	#wpbs header div.banner h1 {
+	 padding-left: 4.4rem;
+     padding-right: 4.4rem;
+	}
+}
+
+@media (max-width:992px) {
+	#wpbs header div.banner h1 {
+		margin-top: 40px;
+		font-size: 36px;
+		line-height: 75px
+	}
+}
+
+@media (max-width:768px) {
+	#wpbs header div.banner h1 {
+		position: relative;
+		width: 100%;
+		bottom: 10px;
+		font-size: 36px;
+		line-height: 36px;
+		text-transform: uppercase
+	}
+}
+
+#wpbs header span.subheading {
+	display: block;
+	width: 100%;
+	font-family: ralewaybold;
+	font-size: 24px;
+	color: #fff;
+	margin: auto;
+	text-align: center;
+	position: relative;
+	top: 280px;
+	padding: 10px
+}
+
+@media (max-width:768px) {
+	#wpbs header span.subheading {
+		top: 160px
+	}
+}
+
+@media (max-width:480px) {
+	#wpbs header span.subheading {
+		top: 70px;
+		font-size: 16px
+	}
+}
+
+#wpbs header span.subheading br {
+	display: none
+}
+
+@media (max-width:992px) {
+	#wpbs header span.subheading br {
+		display: inline
+	}
+}
+
+#wpbs div.scrollDir {
+	font-family: ralewaylight;
+	text-transform: capitalize;
+	font-size: 18px;
+	margin: -73px auto 0 auto;
+	height: auto;
+	width: 100%;
+	background-color: #0c1229;
+	text-align: center;
+	overflow: hidden
+}
+
+#wpbs section.intro {
+	width: 655px;
+	font-family: proxima_nova_altlight;
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 27px;
+	color: #fff;
+	margin: 42px auto 0 auto
+}
+
+#wpbs section.intro p.cta {
+	font-family: proxima_nova_altbold
+}
+
+#wpbs section.intro p.branding {
+	display: block;
+	margin: 75px;
+	text-align: center
+}
+
+#wpbs section.intro p.branding img {
+	margin: 20px
+}
+
+#wpbs section.intro p:nth-of-type(1),
+#wpbs section.intro p:nth-of-type(2) {
+	margin-bottom: 15px
+}
+
+@media (max-width:768px) {
+	#wpbs section.intro {
+		width: 90%;
+		font-size: 18px;
+		line-height: 22px;
+		font-weight: 300
+	}
+	#wpbs section.intro p.branding {
+		margin: 20px 0;
+		width: 100%
+	}
+}
+
+#wpbs div#timelineLine {
+	width: 26px;
+	position: absolute;
+	left: 50%;
+	margin-left: -13px;
+	height: 100px;
+	background-image: url(https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/timeline-line-top.png), url(https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/timeline-line-bottom.png), url(https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/timeline-line-tile.png);
+	background-size: 24px 13px, 24px 13px, 14px 1px;
+	background-repeat: no-repeat, no-repeat, repeat-y;
+	background-position: top center, bottom center, center
+}
+
+#wpbs section#timelineKey {
+	border: solid 1px #611818;
+	font-family: proxima_nova_alt_condensedbold;
+	font-size: 16px;
+	padding: 30px 18px 25px;
+	text-align: center;
+	color: #fff;
+	line-height: 18px;
+	width: 400px;
+	margin: 40px auto -5px auto;
+	position: relative
+}
+
+#wpbs section#timelineKey h3 {
+	background-color: #0c1229;
+	font-family: ralewayextrabold;
+	font-size: 15px;
+	text-transform: uppercase;
+	position: absolute;
+	margin: 0;
+	left: 25%;
+	right: 25%;
+	padding: 3px 5px;
+	top: -10px
+}
+
+#wpbs section#timelineKey span {
+	padding-left: 25px;
+	padding: 5px auto;
+	font-family: proxima_nova_alt_condensedregular, sans-serif;
+	background-size: 18px 18px;
+	background-position: left center;
+	background-repeat: no-repeat;
+	margin-left: 5%
+}
+
+#wpbs section#timelineKey span:first-child {
+	margin-left: 0
+}
+
+#wpbs section#timelineKey span.converge {
+	background-image: url(https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/convergeKey.png)
+}
+
+#wpbs section#timelineKey span.reagan {
+	background-image: url(https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/reaganKey.png)
+}
+
+#wpbs section#timelineKey span.hinckley {
+	background-image: url(https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/hinckleyKey.png)
+}
+
+#wpbs section#timelineKey span.mask {
+	background-color: #0c1229;
+	background-image: url(https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/timeline-line-top.png);
+	background-size: 24px 13px;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	position: absolute;
+	display: block;
+	padding: 0;
+	margin: 0;
+	height: 25px;
+	bottom: -10px;
+	left: 45%;
+	right: 45%
+}
+
+@media (max-width:480px) {
+	#wpbs section#timelineKey {
+		width: 275px
+	}
+	#wpbs section#timelineKey span {
+		margin-left: 6px;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: normal
+	}
+}
+
+#wpbs section.timeline {
+	padding: 170px 30px 50px 30px;
+	max-width: 990px;
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden
+}
+
+#wpbs section.timeline article {
+	box-shadow: 2px 3.5px 8px rgba(0, 0, 0, .15);
+	margin-top: 0;
+	margin-bottom: -65px;
+	width: 45%;
+	color: #fff;
+	float: left;
+	clear: both
+}
+
+#wpbs section.timeline article:last-child {
+	margin-bottom: 0
+}
+
+#wpbs section.timeline article img {
+	width: 100%;
+	margin: 0 0 -15px 0;
+	padding: 0
+}
+
+#wpbs section.timeline article span {
+	font-family: proxima_nova_alt_condensedregular, sans-serif;
+	margin-top: -35px;
+	text-transform: uppercase;
+	height: 35px;
+	line-height: 35px;
+	float: left;
+	padding: 0 15px;
+	z-index: 900;
+	position: relative;
+	background-color: rgba(0, 0, 0, .75)
+}
+
+#wpbs section.timeline article h2 {
+	font-family: ralewayblack;
+	font-size: 30px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	text-transform: uppercase
+}
+
+@media (max-width:480px) {
+	#wpbs section.timeline article h2 {
+		font-size: 24px
+	}
+}
+
+#wpbs section.timeline article div {
+	background-color: #611818;
+	padding: 5px 15px 25px 15px;
+	position: relative;
+	font-size: 16px
+}
+
+#wpbs section.timeline article div p {
+	margin: 0
+}
+
+@media (max-width:768px) {
+	#wpbs section.timeline article div {
+		border-top: 5px solid #c33131
+	}
+}
+
+#wpbs section.timeline article div.line {
+	position: relative;
+	z-index: 1000;
+	margin: -15px -15% -14px 0;
+	padding: 0;
+	height: 31px;
+	background-image: url(https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/marker-reagan.png);
+	background-position: right center;
+	background-color: transparent!important;
+	background-size: 915px 31px
+}
+
+@media (max-width:768px) {
+	#wpbs section.timeline article div.line {
+		display: none
+	}
+}
+
+#wpbs section.timeline article div.crop {
+	background: 0 0!important;
+	border: none;
+	padding: 0;
+	margin: 0;
+	max-height: 235px;
+	overflow: hidden
+}
+
+@media (max-width:768px) {
+	#wpbs section.timeline article div.crop {
+		max-height: 350px
+	}
+}
+
+@media (max-width:768px) {
+	#wpbs section.timeline article {
+		width: 80%;
+		float: none!important;
+		margin: 20px auto 70px auto!important;
+	}
+}
+
+@media (max-width:480px) {
+	#wpbs section.timeline article {
+		width: 95%
+	}
+}
+
+#wpbs section.timeline article.clipping img,
+#wpbs section.timeline article.skinny-clipping img {
+	cursor: pointer
+}
+
+#wpbs section.timeline article.skinny-clipping div.crop {
+	max-width: 250px;
+	max-height: 270px;
+	margin-left: auto;
+	margin-right: auto
+}
+
+@media (max-width:480px) {
+	#wpbs section.timeline article.skinny-clipping div.crop {
+		max-height: 250px;
+		max-width: 270px
+	}
+}
+
+#wpbs section.timeline article.clipping div.crop {
+	margin: 0 -20px -40px -20px;
+	max-height: 335px
+}
+
+#wpbs section.timeline article.clipping span {
+	margin-top: -20px
+}
+
+@media (max-width:768px) {
+	#wpbs section.timeline article.clipping span {
+		margin-top: -35px
+	}
+}
+
+#wpbs section.timeline article.clipping em,
+#wpbs section.timeline article.skinny-clipping em {
+	display: block;
+	margin-top: 24px;
+	font-family: proxima_nova_alt_condensedbold, sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	font-style: italic;
+	text-decoration: underline;
+	cursor: pointer
+}
+
+#wpbs section.timeline article.right {
+	float: right
+}
+
+#wpbs section.timeline article.right div.line {
+	margin: -12px 0 -14px -15%;
+	background-position: left center
+}
+
+#wpbs section.timeline article.noShrink {
+	margin-bottom: 50px
+}
+
+@media (max-width:768px) {
+	#wpbs section.timeline article.noShrink {
+		margin-bottom: 20px
+	}
+}
+
+#wpbs section.timeline article.hinckley div.line {
+	background-image: url(https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/marker-hinckley.png)
+}
+
+#wpbs section.timeline article.hinckley div {
+	background-color: #806c1a
+}
+
+@media (max-width:768px) {
+	#wpbs section.timeline article.hinckley div {
+		border-color: #aa9f43
+	}
+}
+
+#wpbs section.timeline article.featured {
+	width: 95%;
+	height: 425px;
+	float: none;
+	box-sizing: border-box;
+	position: relative;
+	margin: 20px auto 100px auto;
+	border-top: 5px solid #aa9f43;
+	border-bottom: 5px solid #c33131;
+	overflow: hidden
+}
+
+#wpbs section.timeline article.featured div {
+	width: 40%;
+	top: 0;
+	right: 0;
+	height: 100%;
+	position: absolute;
+	padding-top: 45px;
+	background-color: #333
+}
+
+@media (max-width:768px) {
+	#wpbs section.timeline article.featured div {
+		padding-top: 25px;
+		position: relative;
+		height: auto;
+		width: 100%;
+		border: none
+	}
+}
+
+#wpbs section.timeline article.featured img {
+	float: left;
+	height: 100%;
+	width: auto;
+	margin: 0;
+	padding: 0
+}
+
+@media (max-width:768px) {
+	#wpbs section.timeline article.featured img {
+		float: none;
+		height: auto;
+		width: 100%;
+		margin-bottom: -50px
+	}
+}
+
+#wpbs section.timeline article.featured span {
+	margin: 0;
+	z-index: 100;
+	position: absolute;
+	top: 0;
+	left: 60%
+}
+
+@media (max-width:768px) {
+	#wpbs section.timeline article.featured span {
+		margin-top: -35px;
+		height: 35px;
+		line-height: 35px;
+		position: relative;
+		float: left;
+		left: auto;
+		padding: 0 15px
+	}
+}
+
+@media (max-width:768px) {
+	#wpbs section.timeline article.featured {
+		height: auto;
+		width: 80%;
+		margin: 90px auto 70px
+	}
+}
+
+@media (max-width:480px) {
+	#wpbs section.timeline article.featured {
+		width: 95%
+	}
+}
+
+#wpbs div.indicator {
+	color: #fff;
+	z-index: 1010;
+	float: left;
+	width: 60px;
+	margin-top: 120px;
+	margin-bottom: -365px;
+	position: relative;
+	background-color: #141414;
+	border: 2px #611818 solid;
+	box-sizing: border-box
+}
+
+#wpbs div.indicator.fixed {
+	position: fixed;
+	top: 108px
+}
+
+#wpbs div.indicator ul {
+	padding: 13px 0
+}
+
+#wpbs div.indicator ul li {
+	font-family: proxima_nova_alt_condensedlight, sans-serif;
+	font-size: 14px;
+	color: #fff;
+	padding-left: 16px;
+	cursor: pointer
+}
+
+#wpbs div.indicator ul li.active {
+	font-family: proxima_nova_alt_condensedbold, sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	color: #fff;
+	padding-left: 0
+}
+
+#wpbs div.indicator ul li.active:before {
+	content: url(https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/triangle-left.png);
+	width: 8px;
+	height: 11px;
+	padding-right: 9px
+}
+
+#wpbs div.indicator ul li:not(:last-child) {
+	margin-bottom: 18px
+}
+
+@media (max-width:768px) {
+	#wpbs div.indicator {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		box-shadow: none;
+		box-sizing: border-box;
+		border-bottom: 2px solid #611818;
+		margin-top: 0;
+		margin-bottom: -95px;
+		-webkit-transition: top .5s ease;
+		transition: top .5s ease
+	}
+	#wpbs div.indicator.fixed {
+		top: 90px
+	}
+	#wpbs div.indicator ul {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-justify-content: space-around;
+		-ms-flex-pack: distribute;
+		justify-content: space-around;
+		height: 100%;
+		padding: 0 20px
+	}
+	#wpbs div.indicator ul li {
+		padding-left: 0;
+		font-size: 12px;
+		line-height: 30px;
+		float: none
+	}
+	#wpbs div.indicator ul li.active {
+		position: relative;
+		font-size: 14px
+	}
+	#wpbs div.indicator ul li.active:before {
+		content: url(https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/triangle-top.png);
+		position: absolute;
+		top: 0;
+		width: 100%;
+		padding-left: calc(50% - 4px);
+		line-height: 0
+	}
+	#wpbs div.indicator ul li:not(:last-child) {
+		margin-bottom: 0
+	}
+	#wpbs div.indicator ul li:not(:first-child) {
+		padding-left: 16px
+	}
+}
+
+#wpbs section#foot {
+	clear: both;
+	text-align: center
+}
+
+#wpbs section#foot a {
+	display: inline-block
+}
+
+#wpbs section#foot a:first-child {
+	margin-top: 50px
+}
+
+#wpbs section#foot img {
+	margin: 20px 0 30px
+}
+
+#wpbs section#foot h3 {
+	text-transform: uppercase;
+	font-family: proxima_nova_alt_condensedbold;
+	color: #fff;
+	font-size: 24px
+}
+
+#wpbs section#foot .video-container {
+	width: 100%;
+	max-width: 1112px;
+	margin: 20px auto 94px
+}
+
+@media (max-width:480px) {
+	#wpbs section#foot img {
+		margin: 50px 50px 35px
+	}
+	#wpbs section#foot h3 {
+		margin: 0
+	}
+	#wpbs section#foot .video-container {
+		margin: 20px auto 37px
+	}
+}
+
+#wpbs section#sources {
+	padding: 50px 0 48px;
+	background-color: #070b1a
+}
+
+#wpbs section#sources p {
+	width: 100%;
+	max-width: 650px;
+	margin: 0 auto;
+	font-family: proxima_nova_altlight;
+	font-size: 15px;
+	line-height: 20px;
+	color: #ccc
+}
+
+#wpbs section#sources p strong {
+	font-family: proxima_nova_altbold
+}
+
+@media (max-width:480px) {
+	#wpbs section#sources {
+		padding: 22px 12px 24px
+	}
+}
+
+
+/*# sourceMappingURL=natgeo-killing-reagan.min.css.map */

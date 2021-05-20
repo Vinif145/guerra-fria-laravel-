@@ -1,26 +1,25 @@
-@extends('layouts.base')
+@extends('layouts.posts')
 
 @section('content')
-<div class="container">
-      <div class="d-flex justify-content-center">
-                 <div class="row">
-                     @foreach ($category->posts as $post)
-                       <article>
-                                <a class="row mb-3" href="{{route('posts.slug', $post->slug)}}" style="text-decoration: none; color: black;"  >
-                                        <div class="col-sm-4" style="padding: unset">
-                                        <img src="{{Voyager::image($post->image)}}" class="img-fluid" alt="Responsive image">
-                                        </div> 
+<div class="container" >
+       <div class="row">
+                @foreach ($posts as $post)
+                 <a class="col-sm-4" href="{{route('posts.slug', $post->slug)}}" style="text-decoration: none; color: black;"  >
+                        <article>
+                                <div class="row p-3">
 
-                                        <div class="col-sm-8">               
-                                                <h1>{{ $post->title }}</h1>
-                                                <p>{!! $post->excerpt !!}</p>
-                                                <p>{{ $post->slug}}</P>
-                                        </div>
-                                </a>
+                                        <img src="{{Voyager::image($post->image)}}" class="img-fluid" alt="Responsive image" style="padding: unset">
+                                        <h1>{{ $post->title }}</h1>
+                                        <p>{!! $post->excerpt !!}</p>
+                                        
+                                </div>
                         </article>
-                    @endforeach
-                    
-                </div>
-       </div>
-       
+                </a>     
+                @endforeach   
+                 {{ $posts->links() }}  
+        </div>
 </div>
+    
+@endsection
+
+
