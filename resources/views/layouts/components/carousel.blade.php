@@ -12,7 +12,7 @@
           </div>
         </a>
       </div>
-      @foreach ($posts as $post)    
+      @forelse ($posts as $post)    
 
           <div class="carousel-item" data-bs-interval="2000">
             <a href="{{route('posts.slug', $post->slug)}}" style="text-decoration: none; color: black;"  >     
@@ -20,13 +20,14 @@
               <div class="carousel-caption d-none d-sm-block">
                 <h3>{{ $post->title }}</h3>
                 <h4>{!! $post->excerpt !!}</h4>
-                <h5>Postado por {{ $post->authorId->name}}  {{ $post->updated_at}}</h5>
+                <h5>@if($post->authorId) Postado por {{ $post->authorId->name}} @endif   {{ $post->updated_at}}</h5>
                 
               </div>
             </a>
           </div>
-     
-      @endforeach   
+      @empty
+      
+      @endforelse 
 
       <div class="carousel-item" data-bs-interval="2000">
             <a href="{{route('posts')}}" style="text-decoration: none; color: black;"  >     
