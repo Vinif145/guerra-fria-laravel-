@@ -2,7 +2,7 @@
          <div class="container-fluid"  id="footer">
             <div class="row medium">
                    
-
+                    <h5 style="font-family: serif">IFMS Jardim</h5>
                     <hr id="footer-linha"> 
                     <ul class="icons">
 						

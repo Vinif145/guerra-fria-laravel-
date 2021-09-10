@@ -46,6 +46,10 @@ h6 {
    font-size: 15pt!important;
  } 
 
+ .color-collapse{
+   background-color: #212529!important;
+ }
+
  .nav-adjustment{
        padding: 0 1.5em;
 }
@@ -207,6 +211,14 @@ header.masthead .post-heading .meta a {
  } 
 }
 
+@media (min-width: 767px) {  
+
+  .img-fluid-responsive{
+        width: calc(60% + 30px)!important;
+        height: auto;
+}
+
+
 @media (max-width: 320px){
 
   header.masthead .page-heading,
@@ -217,6 +229,28 @@ header.masthead .post-heading .meta a {
     
   }
 }
+
+@media (max-width: 320px){
+
+  header.masthead .page-heading,
+  header.masthead .post-heading,
+  header.masthead .site-heading {
+    padding: 140px 0 150px;
+    color: white;
+    
+  }
+}
+@media (max-width: 425px){
+
+  .mapa-description{
+   padding-left: 0px!important;
+    
+  }
+}
+
+
+
+
 
 
 

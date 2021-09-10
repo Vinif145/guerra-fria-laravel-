@@ -22,4 +22,7 @@
     
 @endsection
 
+@section('footer')
+  @includeIf('layouts.components.footer2')
+@endsection
 

@@ -178,7 +178,13 @@ h6 {
 .carousel-caption {
 
     background-color: rgba(0,0,0,.50);
+   
+}
+
+@media(min-width: 768px){
+    .carousel-caption {
     bottom: 10rem!important;
+   }
 }
 
 .Grad{
@@ -295,7 +301,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 #wpbs section.intro p.branding {
-    display: block;
+    display: contents;
     margin: 75px;
     text-align: center;
 }
@@ -327,7 +333,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 #wpbs section#timelineKey span.reagan {
-    background-image: url(https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/reaganKey.png);
+    background-image: url(../img/USA-KEY.png);
 }
 
 #wpbs section#timelineKey span {
@@ -341,7 +347,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 #wpbs section#timelineKey span.hinckley {
-    background-image: url(https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/hinckleyKey.png);
+    background-image: url(../img/UCRANIA-KEY.png);
 }
 
 #wpbs section#timelineKey span {
@@ -355,7 +361,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 #wpbs section#timelineKey span.converge {
-    background-image: url(https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/convergeKey.png);
+    background-image: url(../img/ENCONTRO_KEY.png);
 }
 
 #wpbs section#timelineKey span {
@@ -370,7 +376,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 #wpbs section#timelineKey span.mask {
     background-color: #0c1229;
-    background-image: url(https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/timeline-line-top.png);
+    background-image: url(../img/timeline-line1.png);
     background-size: 24px 13px;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -390,11 +396,39 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     position: absolute;
     left: 50%;
     margin-left: -13px;
-    height: 100px;
-    background-image: url(https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/timeline-line-top.png),url(https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/timeline-line-bottom.png),url(https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/timeline-line-tile.png);
+    background-image: url(../img/timeline-line1.png), url(../img/timeline-line2.png), url(../img/timeline-line3.png);
     background-size: 24px 13px,24px 13px,14px 1px;
     background-repeat: no-repeat,no-repeat,repeat-y;
     background-position: top center,bottom center,center;
+}
+@media (min-width: 320px) {
+    #wpbs div#timelineLine {
+      height: 3742.55px;
+   }
+}
+
+@media (min-width: 375px) {
+    #wpbs div#timelineLine {
+      height: 3884.55px;
+   }
+}
+
+@media (min-width: 425px) {
+    #wpbs div#timelineLine {
+      height: 3992.55px;
+   }
+}
+
+@media (min-width: 768px) {
+    #wpbs div#timelineLine {
+      height: 4750.55px;
+   }
+}
+
+@media (min-width: 1024px) {
+    #wpbs div#timelineLine {
+      height: 2924.55px;
+   }
 }
 
 #wpbs section.timeline {
@@ -520,10 +554,21 @@ z-index: 1000;
 margin: -15px -15% -14px 0;
 padding: 0;
 height: 31px;
-background-image: url(https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/marker-reagan.png);
+background-image: url(../img/Seta-Vermelha-TimeLine.png);
 background-position: right center;
 background-color: transparent!important;
 background-size: 915px 31px;
+
+}
+
+#wpbs section.timeline article div.especial{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #wpbs section.timeline article div.especial{
+        display: none!important;
+    }
 
 }
 
@@ -571,12 +616,36 @@ background-size: 915px 31px;
     margin: 0;
 }
 
-#wpbs section.timeline article.hinckley div {
-    background-color: #806c1a;
+#wpbs section.timeline article.encontro div {
+	background-color: #192557
 }
 
 #wpbs section.timeline article.hinckley div.line {
-    background-image: url(https://www.washingtonpost.com/wp-stat/ad/public/static/brandconnect/natgeo-killing-reagan/marker-hinckley.png);
+    background-image: url(../img/Seta-Amarela-TimeLine.png);
+}
+
+#wpbs section.timeline article.encontro div.line {
+	background-image: url(../img/Reta-Time1.png);
+    margin: -15px -10% -14px 0;
+}
+
+#wpbs section.timeline article.correcao div.line {
+	background-image: url(../img/Reta-Time1.png);
+	margin: -15px 0% -14px -47px!important;
+}
+
+#wpbs section.timeline article.encontro div.especial{
+    background-image: url(../img/Reta-Time2.png);
+	margin: -25px -13% -14px 0;
+	display: block;
+    background-color: transparent!important;
+}
+
+#wpbs section.timeline article.correcao div.especial{
+    background-image: url(../img/Reta-Time2.png);
+	margin: -25px 0% -14px -39px!important;
+	display: block;
+    background-color: transparent!important;
 }
 
 #wpbs section.timeline article.noShrink {

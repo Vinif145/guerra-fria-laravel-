@@ -32,6 +32,8 @@ Route::get('/index-backup', [HomeController::class, 'index2'])->name('index2');
 /*Rotas dos Posts*/
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
 
+Route::any('/posts/search', [PostController::class, 'search'])->name('posts.search');
+
 Route::get('/posts/id/{id}', [PostController::class, 'show'])->name('posts.show');
 
 Route::get('/posts/{slug}', [PostController::class, 'slug'])->name('posts.slug');

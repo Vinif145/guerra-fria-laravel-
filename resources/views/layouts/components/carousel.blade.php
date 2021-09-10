@@ -17,11 +17,8 @@
           <div class="carousel-item" data-bs-interval="2000">
             <a href="{{route('posts.slug', $post->slug)}}" style="text-decoration: none; color: black;"  >     
               <img src="{{Voyager::image($post->image)}}" class="d-block w-100 img-fluid" alt="...">
-              <div class="carousel-caption d-none d-sm-block">
+              <div class="carousel-caption">
                 <h3>{{ $post->title }}</h3>
-                <h4>{!! $post->excerpt !!}</h4>
-                <h5>@if($post->authorId) Postado por {{ $post->authorId->name}} @endif  gi {{ $post->updated_at}}</h5>
-                
               </div>
             </a>
           </div>

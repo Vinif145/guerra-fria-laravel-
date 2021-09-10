@@ -9,7 +9,7 @@ a{
 }
 
 .title-tooltip{
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .mytooltip .tooltip-item {
@@ -59,7 +59,7 @@ a{
     height: 140px;
     display: block;
     float: right ;
-    margin-right: 1em
+    
 }
 
 .mytooltip .tooltip-item::after {
@@ -98,6 +98,10 @@ a{
     color: #fff
 }
 
+.foto{
+    margin: 0 0 0.5rem -12rem!important;
+}
+
 @media (min-width:1024px) {
     .title-tooltip{
     font-size: 1.2rem;
@@ -114,4 +118,13 @@ a{
     padding: 1.31em 1.21em 1.21em 0;
     color: #fff
    }
+}
+
+@media (max-width:320px) {
+  
+	.mytooltip .tooltip-content {
+        margin: 0 0 0.5rem 6rem;
+    }
+
+
 }

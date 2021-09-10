@@ -15,6 +15,7 @@ class PostController extends Controller
     {
         $posts = \TCG\Voyager\Models\Post::paginate(3); 
         //scopePublished
+      
         $categories = \TCG\Voyager\Models\Category::all();
 
         return view('posts.index', ['posts'=> $posts, 'categorias'=> $categories]);
@@ -79,6 +80,20 @@ class PostController extends Controller
         $posts = \TCG\Voyager\Models\Post::where('author_id', $author_id)->paginate(2);
 
         return view('posts.author', ['posts'=>$posts]);
+    }
+
+    public function search(Request $request)
+    {
+       $filters = $request->all();
+
+       $posts = \TCG\Voyager\Models\Post::where([['title', 'LIKE', "%{$request->search}%"]])
+                                                                    ->orWhere([['body', 'LIKE', "%{$request->search}%"]])
+                                                                    ->paginate(2); 
+
+       $categories = \TCG\Voyager\Models\Category::all();
+
+      return view('posts.index',['posts'=>$posts, 'categorias'=> $categories]);
+    
     }
 
 

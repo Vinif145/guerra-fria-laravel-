@@ -3,9 +3,11 @@
 @section('head')
 <link href="{{ asset('css/index-post-pages.css') }}" rel="stylesheet">
 <link href="{{ asset('css/header.css') }}" rel="stylesheet"><!--Header -->
+<link href="{{ asset('css/footer.css') }}" rel="stylesheet"><!--Nossa própria folha de estilo -->
 @endsection
 
 @section('nav')
+<span id='topo'></span>
 <nav class="navbar navbar-expand-lg navbar-dark triade" >
         <div class="container-fluid">
             <div id="header2">
@@ -33,5 +35,9 @@
             </div>
         </div>
 </nav>
+@endsection
+
+@section('javascript')
+ <script src="https://kit.fontawesome.com/2c19de257c.js" crossorigin="anonymous"></script>
 @endsection
 

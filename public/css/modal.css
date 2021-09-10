@@ -1,13 +1,52 @@
 #article-modal{
-    background-color:hsl(200deg 44% 70%);
+    
     margin-bottom: 1rem;
+    text-decoration: none;
+    
+}
+
+#article-modal a{
+    text-decoration: none;
+    color: #0c1229;
 }
 
 .modal-body{
-    background-color: #0c1229;
+    background-color: #dee2e6;
 }
 
 .modal-header{
-    background-color:hsl(200deg 44% 70%);
+    background-color:#24367d;
 }
+
+.russia{
+    background-color:#0033A0;
+}
+
+.red-russia{
+    background-color: #dee2e6;
+}
+
+#Russia{
+    
+    text-decoration: none;
+    color: #0c1229;
+    
+}
+
+#vitrine 
+{ 
+    height: 100px;
+    width: 100%; 
+    background-color: #FFFFFF; 
+} 
+#vitrine2 { 
+    height: 100px;
+    width: 100%; 
+    background-color: #0072CE; 
+} 
+#vitrine3 { 
+    height: 100px;
+    width: 100%; 
+    background-color: #EF3340; 
+} 
 

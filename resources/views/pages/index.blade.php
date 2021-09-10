@@ -1,7 +1,7 @@
 @extends('layouts.posts')
 
 @section('content')
-<div class="container" >
+<div class="container mb-3" >
        <div class="row">
                  @foreach ($pages as $page)
                  <a class="col-sm-4" href="{{route('pages.slug', $page->slug)}}" style="text-decoration: none; color: black;"  >
@@ -20,4 +20,8 @@
                 {{ $pages->links() }}   
         </div>
 </div>
+@endsection
+
+@section('footer')
+  @includeIf('layouts.components.footer2')
 @endsection
