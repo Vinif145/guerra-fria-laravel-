@@ -2,13 +2,17 @@
 
 @section('header')
 
-<div class="mt-2 me-3" style="text-align: end">
-        <form action="{{route ('posts.search')}}" method="post">
-                @csrf
-                <input type="text" name="search" placeholder="Filtrar:">
-                <button type="submit">Filtrar</bottom>
-        </form> 
-</div>
+
+<nav class="navbar navbar-light bg-light" >
+  <div class="container-fluid">
+    <div></div>      
+    <form class="d-flex" action="{{route ('posts.search')}}" method="post">
+            @csrf
+      <input class="form-control me-2" type="search" name="search" placeholder="Filtrar:" aria-label="Search">
+      <button class="btn btn-outline-dark" type="submit"><i class="fas fa-search"></i></button>
+    </form>
+  </div>
+</nav>
 @endsection
 
 @section('content')
